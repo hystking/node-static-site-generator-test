@@ -21,11 +21,14 @@ block append meta
   meta(name="twitter:image:src", content=meta.ogImage)
 
 block content
-  main(class=meta.slug) main
+  main(class=meta.slug)
+    each article in articles.reverse()
+      h1= article.title
+      p: pre= article.body
   include module/social-roots
 
 block append stylesheet
-  link(href="css/index.css", rel="stylesheet")
+  //link(href="css/index.css", rel="stylesheet")
 
 block append script-body
   script(src="js/index.js")

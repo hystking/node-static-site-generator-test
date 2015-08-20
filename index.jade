@@ -1,9 +1,20 @@
 doctype
 html
-  script.
-    require("coffee-script/register");
-    require("./index.coffee");
   head
+    meta(charset="utf-8")
     title hello nw
   body
-    button#buildButton Build it!
+    div
+      p タイトル
+      input#titleInput
+    div
+      p 本文
+      textArea#bodyInput
+    div
+      button#addButton Add
+  script.
+    global.addButton = document.getElementById("addButton");
+    global.titleInput = document.getElementById("titleInput");
+    global.bodyInput = document.getElementById("bodyInput");
+    require("coffee-script/register");
+    require("./index.coffee");
