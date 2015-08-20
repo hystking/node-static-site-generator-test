@@ -1,4 +1,6 @@
 {
+  "name": "node-static-blog",
+  "main": "index.html",
   "scripts": {
     "watch": "gulp watch",
     "build": "NODE_ENV=production gulp build",
@@ -35,6 +37,7 @@
     "mkdirp": "latest",
     "modernizr": "latest",
     "nib": "latest",
+    "nw": "latest",
     "require-dir": "latest",
     "run-sequence": "latest",
     "serve-static": "latest",
